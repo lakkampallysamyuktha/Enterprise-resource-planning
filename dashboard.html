@@ -163,6 +163,27 @@
     </main>
 
     <script>
+        // Update user profile from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const userEmail = localStorage.getItem('userEmail');
+            const userName = localStorage.getItem('userName');
+            
+            if (userEmail) {
+                const uemailEls = document.querySelectorAll('.uemail');
+                uemailEls.forEach(el => el.textContent = userEmail);
+            }
+            
+            if (userName) {
+                const unameEls = document.querySelectorAll('.uname');
+                unameEls.forEach(el => el.textContent = userName);
+                
+                // Update avatar initials
+                const initials = userName.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+                const avaEls = document.querySelectorAll('.user-ava');
+                avaEls.forEach(el => el.textContent = initials);
+            }
+        });
+
         // Sidebar Toggle Logic
         const menuToggle = document.getElementById('menu-toggle');
         const closeBtn = document.getElementById('close-btn');

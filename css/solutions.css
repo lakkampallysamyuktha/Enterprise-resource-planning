@@ -1591,4 +1591,41 @@
     .sol-hero-content h1 {
         font-size: 2rem;
     }
+
+    /* Mobile overrides for shifting elements */
+    .transformation-scene {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        overflow: hidden;
+    }
+
+    .problem-state {
+        display: flex !important;
+        flex-direction: column !important; /* Force them to stack nicely on mobile */
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .broken-sys {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 auto 0.5rem auto !important;
+        position: relative !important;
+        transform: none !important;
+        left: auto !important;
+        top: auto !important;
+    }
+
+    .solution-state {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
+        transform: none !important;
+        left: auto !important;
+        top: auto !important;
+    }
 }

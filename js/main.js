@@ -26,6 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Animate footer list items and links from down
+    document.querySelectorAll('.footer li, .footer .f-social a, .footer .f-contact').forEach((el, index) => {
+        if (!el.hasAttribute('data-aos')) {
+            el.setAttribute('data-aos', 'fade-up');
+            el.setAttribute('data-aos-delay', (index % 5) * 50);
+        }
+    });
+
     // Initialize AOS for scroll reveals
     if (typeof AOS !== 'undefined') {
         AOS.init({
@@ -470,7 +478,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     const responseHTML = `
                         <div class="chat-msg ai-msg">
                             <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
-                            <div class="msg-bubble">I have processed your request. Based on real-time ERP data, all systems are operating optimally and your metrics look strong!</div>
+                            <div class="msg-bubble">
+                                I have processed your request. Based on real-time ERP data, all systems are operating optimally and your metrics look strong!
+                                <div style="margin-top: 10px;">
+                                    <button onclick="window.location.href='404.html'" class="btn btn-outline" style="padding: 5px 10px; font-size: 0.8rem; width: 100%; cursor: pointer;">View Report</button>
+                                </div>
+                            </div>
                         </div>
                     `;
                     aiChatHistory.insertAdjacentHTML('beforeend', responseHTML);

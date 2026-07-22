@@ -224,6 +224,7 @@
 
 .hub-center h5 {
     margin-bottom: 2rem;
+    font-size: 1.25rem;
 }
 
 .hub-pulse {
@@ -304,7 +305,16 @@
     margin-right: 0 !important;
     align-self: center !important;
     width: 100% !important;
-    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important; /* Fix GSAP conflict */
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+    cursor: pointer;
+}
+@media (min-width: 992px) {
+    .flow-card:hover {
+        transform: translateY(-5px);
+        background: rgba(37,99,235,0.15);
+        border-color: var(--c-blue);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
 }
 .flow-engine {
     padding: 2.5rem 1.5rem;
@@ -845,6 +855,9 @@
         transform: translate(-50%, -50%);
         width: 300px;
     }
+    .hub-center:hover {
+        transform: translate(-50%, calc(-50% - 5px));
+    }
     
     .hub-nodes {
         display: block; /* use absolute positioning */
@@ -1025,6 +1038,89 @@
    Mobile Fixes
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
+    .operate-hub {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .hub-center {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        margin: 0 auto 2rem auto !important;
+        width: 100% !important;
+    }
+    .hub-nodes {
+        display: flex !important;
+        flex-direction: column !important;
+        position: relative !important;
+    }
+    .hub-node {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        margin: 0 auto 1rem auto !important;
+        width: 100% !important;
+        transform: none !important;
+    }
+
+    .t-node, .t-discover, .t-integrate, .t-automate, .t-optimize {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        transform: none !important;
+        margin: 0 auto 1.5rem auto !important;
+        grid-column: auto !important;
+    }
+
+    .c-hero {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        transform: none !important;
+        margin: 3rem auto 0 !important;
+    }
+
+    .c-node, .c-support, .c-vision {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        transform: none !important;
+        margin: 0 auto 1rem auto !important;
+    }
+
+    .future-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        overflow: hidden;
+    }
+
+    .f-timeline {
+        padding-left: 1.5rem !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        align-items: center !important;
+    }
+    
+    .f-item {
+        position: relative !important;
+        width: 100% !important;
+        margin: 0 auto 1rem auto !important;
+        transform: none !important;
+    }
+
+    .f-hero {
+        position: relative !important;
+        width: 100% !important;
+        margin: 0 auto 2rem auto !important;
+    }
+
     .abt-hero {
         padding-top: 100px;
         overflow-x: hidden;
