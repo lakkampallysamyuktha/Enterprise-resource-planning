@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance – Stackly ERP</title>
+    <meta name="description" content="Stackly ERP Finance">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="app-layout">
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="sidebar-logo">
+            <img src="Images/img_03252981.webp" alt="Stackly">
+            <span class="role-badge" id="sidebar-role">Admin</span>
+        </a>
+        <button class="close-sidebar-btn" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+
+        <nav class="sidebar-nav">
+            <span class="nav-section-label">Overview</span>
+            <a href="dashboard.html" class="nav-link">
+                <i class="fa-solid fa-chart-pie"></i> Dashboard
+            </a>
+            <a href="finance.html" class="nav-link active">
+                <i class="fa-solid fa-wallet"></i> Finance
+            </a>
+            <a href="inventory.html" class="nav-link">
+                <i class="fa-solid fa-boxes-stacked"></i> Inventory
+            </a>
+            <a href="crm.html" class="nav-link">
+                <i class="fa-solid fa-users"></i> CRM
+            </a>
+            <a href="hr-payroll.html" class="nav-link">
+                <i class="fa-solid fa-id-card"></i> HR & Payroll
+            </a>
+
+            <div class="nav-divider"></div>
+            
+            <span class="nav-section-label">System</span>
+            <a href="users.html" class="nav-link">
+                <i class="fa-solid fa-users-gear"></i> User Management
+            </a>
+            <a href="integrations.html" class="nav-link">
+                <i class="fa-solid fa-plug"></i> Integrations
+            </a>
+            <a href="settings.html" class="nav-link">
+                <i class="fa-solid fa-gear"></i> Settings
+            </a>
+            <a href="login.html" class="nav-link logout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-ava" id="sidebar-ava">JD</div>
+            <div class="user-info">
+                <div class="uname" id="sidebar-name">John Doe</div>
+                <div class="uemail" id="sidebar-email">john@stackly.com</div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-wrap">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                <div class="topbar-title">Finance Center</div>
+            </div>
+            <div class="topbar-right">
+                <button class="notif-btn" onclick="window.location.href='404.html'">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="notif-dot"></div>
+                </button>
+            </div>
+        </header>
+
+        <!-- Page Body -->
+        <div class="page-body">
+            <div class="sec-head">
+                <h2 id="topbar-greeting">Finance Overview</h2>
+                <button class="btn btn-primary" onclick="window.location.href='404.html'">Create Invoice</button>
+            </div>
+
+            <!-- KPIs -->
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon" style="background: rgba(34, 197, 94, 0.2); color: #22c55e;"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <div class="kpi-info">
+                        <span>Total Revenue</span>
+                        <h4>$1,245,000</h4>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon" style="background: rgba(239, 68, 68, 0.2); color: #ef4444;"><i class="fa-solid fa-arrow-trend-down"></i></div>
+                    <div class="kpi-info">
+                        <span>Total Expenses</span>
+                        <h4>$432,100</h4>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+                    <div class="kpi-info">
+                        <span>Net Profit</span>
+                        <h4>$812,900</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Recent Transactions -->
+                <div class="glass-card p-4">
+                    <h3 class="mb-4">Latest Invoices</h3>
+                    <div class="data-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Invoice ID</th>
+                                    <th>Client</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#INV-001</td>
+                                    <td>Stackly</td>
+                                    <td>Jul 22, 2026</td>
+                                    <td>$4,500.00</td>
+                                    <td><span class="status-badge active">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#INV-002</td>
+                                    <td>Globex Inc</td>
+                                    <td>Jul 21, 2026</td>
+                                    <td>$2,100.50</td>
+                                    <td><span class="status-badge pending">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Sidebar Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeBtn = document.getElementById('close-btn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('open');
+        }
+
+        menuToggle.addEventListener('click', toggleSidebar);
+        closeBtn.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+
+        // Load User Info
+        document.addEventListener('DOMContentLoaded', () => {
+            const email = localStorage.getItem('userEmail');
+            const name = localStorage.getItem('userName');
+            const role = localStorage.getItem('userRole');
+            
+            if (email) {
+                document.getElementById('sidebar-email').textContent = email;
+            }
+            if (name) {
+                document.getElementById('sidebar-name').textContent = name;
+                
+                const initials = name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+                document.getElementById('sidebar-ava').textContent = initials;
+            }
+            if (role) {
+                document.getElementById('sidebar-role').textContent = role.charAt(0).toUpperCase() + role.slice(1);
+            }
+        });
+    </script>
+</body>
+</html>

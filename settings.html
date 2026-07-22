@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings – Stackly ERP</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="app-layout">
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="sidebar-logo">
+            <img src="Images/img_03252981.webp" alt="Stackly">
+            <span class="role-badge" id="sidebar-role">Admin</span>
+        </a>
+        <button class="close-sidebar-btn" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+
+        <nav class="sidebar-nav">
+            <span class="nav-section-label">Overview</span>
+            <a href="dashboard.html" class="nav-link">
+                <i class="fa-solid fa-chart-pie"></i> Dashboard
+            </a>
+            <a href="finance.html" class="nav-link">
+                <i class="fa-solid fa-wallet"></i> Finance
+            </a>
+            <a href="inventory.html" class="nav-link">
+                <i class="fa-solid fa-boxes-stacked"></i> Inventory
+            </a>
+            <a href="crm.html" class="nav-link">
+                <i class="fa-solid fa-users"></i> CRM
+            </a>
+            <a href="hr-payroll.html" class="nav-link">
+                <i class="fa-solid fa-id-card"></i> HR & Payroll
+            </a>
+
+            <div class="nav-divider"></div>
+            
+            <span class="nav-section-label">System</span>
+            <a href="users.html" class="nav-link">
+                <i class="fa-solid fa-users-gear"></i> User Management
+            </a>
+            <a href="integrations.html" class="nav-link">
+                <i class="fa-solid fa-plug"></i> Integrations
+            </a>
+            <a href="settings.html" class="nav-link active">
+                <i class="fa-solid fa-gear"></i> Settings
+            </a>
+            <a href="login.html" class="nav-link logout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-ava" id="sidebar-ava">JD</div>
+            <div class="user-info">
+                <div class="uname" id="sidebar-name">John Doe</div>
+                <div class="uemail" id="sidebar-email">john@stackly.com</div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-wrap">
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                <div class="topbar-title">System Settings</div>
+            </div>
+            <div class="topbar-right">
+                <button class="notif-btn" onclick="window.location.href='404.html'">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Page Body -->
+        <div class="page-body">
+            <div class="sec-head">
+                <h2>Preferences</h2>
+                <button class="btn btn-primary" onclick="window.location.href='404.html'">Save Changes</button>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="glass-card p-4">
+                    <h3 class="mb-4">Profile Settings</h3>
+                    <form style="display: flex; flex-direction: column; gap: 15px;">
+                        <div>
+                            <label style="display:block; margin-bottom: 5px; color: rgba(255,255,255,0.7);">Full Name</label>
+                            <input type="text" class="form-control" style="background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px; color: white; width: 100%;" value="John Doe">
+                        </div>
+                        <div>
+                            <label style="display:block; margin-bottom: 5px; color: rgba(255,255,255,0.7);">Email</label>
+                            <input type="email" class="form-control" style="background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px; color: white; width: 100%;" value="john@stackly.com">
+                        </div>
+                    </form>
+                </div>
+                <div class="glass-card p-4">
+                    <h3 class="mb-4">Security</h3>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 15px;">
+                        <li style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 15px;">
+                            <div>
+                                <strong>Two-Factor Authentication</strong>
+                                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin: 0;">Require 2FA for your account.</p>
+                            </div>
+                            <style>
+                                .toggle-switch { position: relative; display: inline-block; width: 40px; height: 24px; }
+                                .toggle-switch input { opacity: 0; width: 0; height: 0; }
+                                .toggle-slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255,255,255,0.2); border-radius: 24px; transition: .4s; }
+                                .toggle-slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; border-radius: 50%; transition: .4s; }
+                                .toggle-switch input:checked + .toggle-slider { background-color: var(--c-blue); }
+                                .toggle-switch input:checked + .toggle-slider:before { transform: translateX(16px); }
+                            </style>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeBtn = document.getElementById('close-btn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+
+        function toggleSidebar() { sidebar.classList.toggle('open'); overlay.classList.toggle('open'); }
+        menuToggle.addEventListener('click', toggleSidebar);
+        closeBtn.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const email = localStorage.getItem('userEmail');
+            const name = localStorage.getItem('userName');
+            const role = localStorage.getItem('userRole');
+            if (email) document.getElementById('sidebar-email').textContent = email;
+            if (name) {
+                document.getElementById('sidebar-name').textContent = name;
+                document.getElementById('sidebar-ava').textContent = name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+            }
+            if (role) document.getElementById('sidebar-role').textContent = role.charAt(0).toUpperCase() + role.slice(1);
+        });
+    </script>
+</body>
+</html>

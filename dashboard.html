@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard – Stackly ERP</title>
+    <meta name="description" content="Stackly ERP Dashboard">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="app-layout">
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="sidebar-logo">
+            <img src="Images/img_03252981.webp" alt="Stackly">
+            <span class="role-badge" id="sidebar-role">Admin</span>
+        </a>
+        <button class="close-sidebar-btn" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+
+        <nav class="sidebar-nav">
+            <span class="nav-section-label">Overview</span>
+            <a href="dashboard.html" class="nav-link active">
+                <i class="fa-solid fa-chart-pie"></i> Dashboard
+            </a>
+            <a href="finance.html" class="nav-link">
+                <i class="fa-solid fa-wallet"></i> Finance
+            </a>
+            <a href="inventory.html" class="nav-link">
+                <i class="fa-solid fa-boxes-stacked"></i> Inventory
+            </a>
+            <a href="crm.html" class="nav-link">
+                <i class="fa-solid fa-users"></i> CRM
+            </a>
+            <a href="hr-payroll.html" class="nav-link">
+                <i class="fa-solid fa-id-card"></i> HR & Payroll
+            </a>
+
+            <div class="nav-divider"></div>
+            
+            <span class="nav-section-label">System</span>
+            <a href="users.html" class="nav-link">
+                <i class="fa-solid fa-users-gear"></i> User Management
+            </a>
+            <a href="integrations.html" class="nav-link">
+                <i class="fa-solid fa-plug"></i> Integrations
+            </a>
+            <a href="settings.html" class="nav-link">
+                <i class="fa-solid fa-gear"></i> Settings
+            </a>
+            <a href="login.html" class="nav-link logout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-ava" id="sidebar-ava">JD</div>
+            <div class="user-info">
+                <div class="uname" id="sidebar-name">John Doe</div>
+                <div class="uemail" id="sidebar-email">john@stackly.com</div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-wrap">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                <div class="topbar-title">Enterprise Dashboard</div>
+            </div>
+            <div class="topbar-right">
+                <a href="404.html" class="notif-btn">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="notif-dot"></div>
+                </a>
+            </div>
+        </header>
+
+        <!-- Page Body -->
+        <div class="page-body">
+            <div class="sec-head">
+                <h2 id="topbar-greeting">Welcome back, John 👋</h2>
+                <button class="btn btn-primary" onclick="window.location.href='404.html'">Generate Report</button>
+            </div>
+
+            <!-- Client Projects Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-bottom: 24px;">
+                <!-- Project 1 -->
+                <div class="glass-card" style="overflow: hidden; padding: 0;">
+                    <img src="Images/img_92f370b0.webp" alt="Data Analytics" style="width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <div style="padding: 24px;">
+                        <h3 style="margin: 0 0 10px 0;">Enterprise Analytics Suite</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 20px;">Your custom data processing and visualization pipeline.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="status-badge active">Active</span>
+                            <button class="btn btn-outline" style="border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white;" onclick="window.location.href='404.html'">Manage</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card" style="overflow: hidden; padding: 0;">
+                    <img src="Images/img_4a096fc5.webp" alt="Cloud Storage" style="width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <div style="padding: 24px;">
+                        <h3 style="margin: 0 0 10px 0;">Secure Cloud Storage</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 20px;">50TB encrypted remote storage allocated for your team.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="status-badge active">Active</span>
+                            <button class="btn btn-outline" style="border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white;" onclick="window.location.href='404.html'">Manage</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="glass-card p-4">
+                    <h3 class="mb-4">Recent Invoices</h3>
+                    <div class="data-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#INV-001</td>
+                                    <td>Jul 22, 2026</td>
+                                    <td>$4,500.00</td>
+                                    <td><span class="status-badge active">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#INV-002</td>
+                                    <td>Jul 21, 2026</td>
+                                    <td>$2,100.50</td>
+                                    <td><span class="status-badge pending">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // Sidebar Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeBtn = document.getElementById('close-btn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('open');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        menuToggle.addEventListener('click', toggleSidebar);
+        closeBtn.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+
+        // Load User Info
+        document.addEventListener('DOMContentLoaded', () => {
+            const email = localStorage.getItem('userEmail');
+            const name = localStorage.getItem('userName');
+            const role = localStorage.getItem('userRole');
+            
+            if (email) {
+                document.getElementById('sidebar-email').textContent = email;
+            }
+            if (name) {
+                document.getElementById('sidebar-name').textContent = name;
+                document.getElementById('topbar-greeting').textContent = `Welcome back, ${name} 👋`;
+                
+                const initials = name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+                document.getElementById('sidebar-ava').textContent = initials;
+            }
+            if (role) {
+                document.getElementById('sidebar-role').textContent = role.charAt(0).toUpperCase() + role.slice(1);
+            }
+        });
+    </script>
+</body>
+</html>

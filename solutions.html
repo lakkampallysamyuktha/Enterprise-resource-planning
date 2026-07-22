@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions | Enterprise ERP SaaS</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css?v=4">
+    <link rel="stylesheet" href="css/solutions.css?v=3">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Header Design: Floating Glass Navbar -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="Images/img_03252981.webp" alt="Stackly Logo" style="height: 45px; width: auto; transform: scale(1.5); transform-origin: left center;">
+            </a>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="solutions.html" class="active">Solutions</a></li>
+                    <li><a href="platform.html">Platform</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <a href="login.html" class="btn btn-login desktop-only">Login</a>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Animated Mobile Drawer -->
+        <div class="mobile-drawer" id="mobileDrawer">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="solutions.html" class="active">Solutions</a></li>
+                    <li><a href="platform.html">Platform</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="mobile-actions">
+                    <a href="login.html" class="btn btn-login mobile-btn">Login</a>
+                    <a href="404.html" class="btn btn-primary mobile-btn">Request Demo</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero (Updated with Main Image) -->
+        <section class="sol-hero section-padding">
+            <div class="hero-bg">
+                <div class="fluid-bg">
+                    <div class="blob blob-1"></div>
+                    <div class="blob blob-2"></div>
+                </div>
+                <div class="bg-grid"></div>
+                <div class="bg-glow"></div>
+                <div class="data-point p1"></div>
+                <div class="data-point p2"></div>
+                <div class="data-point p3"></div>
+            </div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="sol-hero-grid">
+                    <div class="sol-hero-content">
+                        <div class="section-pill mb-4">
+                            <i class="fa-solid fa-lightbulb"></i> ERP SOLUTIONS
+                        </div>
+                        <h1>Turning Complex Business Operations Into <span class="blue-text">Intelligent Solutions</span></h1>
+                        <p class="hero-desc" style="color: #ffffff !important; opacity: 1 !important; visibility: visible !important;">Connect your finance, operations, customers, and teams with ERP solutions designed to remove complexity and improve business performance.</p>
+                        
+                        <div class="hero-actions">
+                            <a href="404.html" class="btn btn-primary">Explore Solutions</a>
+                            <a href="404.html" class="btn btn-outline">Schedule Consultation</a>
+                        </div>
+                        
+                        <!-- Mobile View Tags -->
+                        <div class="mobile-sol-tags">
+                            <span class="sol-tag">Finance</span>
+                            <span class="sol-tag">Operations</span>
+                            <span class="sol-tag">Growth</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sol-hero-visual">
+                        <div class="transformation-scene">
+                            <div class="problem-state">
+                                <div class="broken-sys s1 glass-card">Manual Work</div>
+                                <div class="broken-sys s2 glass-card">Silos</div>
+                                <div class="broken-sys s3 glass-card">Data Lag</div>
+                            </div>
+                            <div class="transformation-arrow">
+                                <i class="fa-solid fa-arrow-right-long desktop-arrow blue-text"></i>
+                                <i class="fa-solid fa-arrow-down-long mobile-arrow blue-text"></i>
+                            </div>
+                            <div class="solution-state glass-card">
+                                <h3>Smart ERP Process</h3>
+                                <div class="connected-nodes">
+                                    <span class="node"><i class="fa-solid fa-check"></i></span>
+                                    <span class="node"><i class="fa-solid fa-check"></i></span>
+                                    <span class="node"><i class="fa-solid fa-check"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Solution Journey Map (Unchanged visually, just removed old float animations for a clean look) -->
+        <section id="solutions-map" class="sol-journey section-padding bg-dark">
+            <div class="container text-center">
+                <div class="section-header">
+                    <div class="section-pill"><i class="fa-solid fa-map"></i> JOURNEY MAP</div>
+                    <h2>Every Business Need Has A Smarter Path</h2>
+                </div>
+                
+                <div class="journey-map">
+                    <!-- Path 1: Financial Control -->
+                    <div class="j-path">
+                        <div class="j-col challenge glass-card">
+                            <span class="label">Challenge</span>
+                            <p>Disconnected financial data</p>
+                        </div>
+                        <div class="j-col arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="j-col solution glass-card">
+                            <span class="label">Solution</span>
+                            <h4>Unified financial management</h4>
+                        </div>
+                        <div class="j-col arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="j-col outcome text-green glass-card">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <p>Better control and visibility</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Path 2: Operational Excellence -->
+                    <div class="j-path">
+                        <div class="j-col challenge glass-card">
+                            <span class="label">Challenge</span>
+                            <p>Slow manual processes</p>
+                        </div>
+                        <div class="j-col arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="j-col solution glass-card">
+                            <span class="label">Solution</span>
+                            <h4>Connected workflows</h4>
+                        </div>
+                        <div class="j-col arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="j-col outcome text-green glass-card">
+                            <i class="fa-solid fa-bolt"></i>
+                            <p>Faster execution</p>
+                        </div>
+                    </div>
+
+                    <!-- Path 3: Customer Growth -->
+                    <div class="j-path">
+                        <div class="j-col challenge glass-card">
+                            <span class="label">Challenge</span>
+                            <p>Scattered customer information</p>
+                        </div>
+                        <div class="j-col arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="j-col solution glass-card">
+                            <span class="label">Solution</span>
+                            <h4>Smart customer management</h4>
+                        </div>
+                        <div class="j-col arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="j-col outcome text-green glass-card">
+                            <i class="fa-solid fa-users"></i>
+                            <p>Better relationships</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: ERP Solution Scenarios (Updated with Split Layout & Images) -->
+        <section class="sol-scenarios section-padding bg-navy">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-pill"><i class="fa-solid fa-eye"></i> SCENARIOS</div>
+                    <h2>See ERP Solutions In Action</h2>
+                </div>
+                
+                <div class="scenario-layouts">
+                    <!-- Scenario 1: Manufacturing (Image Left, Content Right) -->
+                    <div class="scenario-split split-normal">
+                        <div class="split-image">
+                            <img src="Images/img_c8e084ab.webp" alt="Smart Factory">
+                        </div>
+                        <div class="split-content">
+                            <h3>Manufacturing Solution</h3>
+                            <div class="scenario-details">
+                                <div class="sd-block">
+                                    <span class="sd-label">Challenge</span>
+                                    <p>Inventory delays and blind spots</p>
+                                </div>
+                                <div class="sd-block highlight-block">
+                                    <span class="sd-label blue-text">ERP Solution</span>
+                                    <p>Smart Factory & Production Monitoring</p>
+                                </div>
+                                <div class="sd-block">
+                                    <span class="sd-label text-green">Business Impact</span>
+                                    <p>Automated warehouse control and 40% faster production</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scenario 2: Retail (Content Left, Image Right) -->
+                    <div class="scenario-split split-reverse">
+                        <div class="split-content">
+                            <h3>Retail & eCommerce</h3>
+                            <div class="scenario-details">
+                                <div class="sd-block">
+                                    <span class="sd-label">Challenge</span>
+                                    <p>Stock issues and disconnected stores</p>
+                                </div>
+                                <div class="sd-block highlight-block">
+                                    <span class="sd-label blue-text">ERP Solution</span>
+                                    <p>Omnichannel Digital Store Network</p>
+                                </div>
+                                <div class="sd-block">
+                                    <span class="sd-label text-green">Business Impact</span>
+                                    <p>Real-time retail analytics and unified inventory tracking</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="split-image">
+                            <img src="Images/img_e122331e.webp" alt="Digital Retail Store">
+                        </div>
+                    </div>
+
+                    <!-- Scenario 3: Professional Services (Image Left, Content Right) -->
+                    <div class="scenario-split split-normal professional-services-split">
+                        <div class="split-image split-large-image">
+                            <img src="Images/img_709bdb45.webp" alt="Professional Services Data">
+                        </div>
+                        <div class="split-content">
+                            <h3>Professional Services</h3>
+                            <div class="scenario-details">
+                                <div class="sd-block">
+                                    <span class="sd-label">Challenge</span>
+                                    <p>Resource mismanagement and project delays</p>
+                                </div>
+                                <div class="sd-block highlight-block">
+                                    <span class="sd-label blue-text">ERP Solution</span>
+                                    <p>Unified Project & Resource Hub</p>
+                                </div>
+                                <div class="sd-block">
+                                    <span class="sd-label text-green">Business Impact</span>
+                                    <p>Optimized utilization and 30% higher profit margins</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Solution Configurator (Updated with UI Preview Image) -->
+        <section class="sol-configurator section-padding bg-dark">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-pill"><i class="fa-solid fa-sliders"></i> CONFIGURATOR</div>
+                    <h2>Build A Solution That Fits Your Business</h2>
+                </div>
+                
+                <div class="config-interface-split glass-card">
+                    <!-- Left: Configuration Panel -->
+                    <div class="config-panel">
+                        <div class="config-options">
+                            <div class="config-group">
+                                <label>Industry</label>
+                                <select id="config-industry" class="custom-select">
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="retail">Retail & Ecommerce</option>
+                                    <option value="services">Professional Services</option>
+                                </select>
+                            </div>
+                            <div class="config-group">
+                                <label>Business Challenge</label>
+                                <select id="config-challenge" class="custom-select">
+                                    <option value="inventory">Inventory Control</option>
+                                    <option value="finance">Financial Reporting</option>
+                                    <option value="hr">Workforce Management</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="config-result active-result">
+                            <span class="result-label">Recommended Solution:</span>
+                            <h3 id="config-output" class="blue-text">ERP Operations Suite</h3>
+                            <p id="config-desc">End-to-end operational control with advanced forecasting.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Live Preview Image -->
+                    <div class="config-preview">
+                        <div class="preview-header">
+                            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+                            <span class="preview-title">Live Workspace Preview</span>
+                        </div>
+                        <div class="preview-image-wrap">
+                            <img src="Images/img_7e888bcf.webp" alt="ERP UI Preview" id="ui-preview-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Business Impact Center -->
+        <section class="impact-center-section section-padding">
+            <!-- Background Elements -->
+            <div class="impact-bg-grid"></div>
+            <div class="impact-glow"></div>
+            <div class="impact-particles">
+                <div class="pt p1"></div><div class="pt p2"></div><div class="pt p3"></div><div class="pt p4"></div>
+            </div>
+
+            <div class="container text-center" style="position:relative; z-index: 2;">
+                <div class="section-header">
+                    <div class="section-pill">BUSINESS TRANSFORMATION</div>
+                    <h2>Business Transformation</h2>
+                    <p class="mx-auto" style="max-width: 650px; margin-left: auto; margin-right: auto;">Visualizing the transition from traditional business operations to a modern connected ERP ecosystem.</p>
+                </div>
+                
+                <div class="impact-stage">
+                    <!-- Left: BEFORE -->
+                    <div class="impact-panel impact-before glass-card">
+                        <div class="panel-header">BEFORE</div>
+                        <ul class="impact-list">
+                            <li><i class="fa-solid fa-table-list"></i> Spreadsheet windows</li>
+                            <li><i class="fa-solid fa-file-lines"></i> Paper documents</li>
+                            <li><i class="fa-solid fa-envelope-open-text"></i> Email notifications</li>
+                            <li><i class="fa-solid fa-link-slash"></i> Disconnected tools</li>
+                            <li><i class="fa-solid fa-clipboard-list"></i> Manual tracking</li>
+                            <li><i class="fa-solid fa-chart-pie"></i> Delayed data</li>
+                        </ul>
+                    </div>
+
+                    <!-- Connector 1 -->
+                    <div class="impact-connector">
+                        <div class="c-beam-vertical mobile-only"></div>
+                        <div class="c-beam-horizontal desktop-only"></div>
+                        <i class="fa-solid fa-arrow-down mobile-only"></i>
+                        <i class="fa-solid fa-arrow-right desktop-only"></i>
+                    </div>
+
+                    <!-- Center: ERP ENGINE -->
+                    <div class="impact-panel impact-core glass-card">
+                        <div class="panel-header blue-text" style="border-bottom: none; text-align: center; font-size: 1.5rem; text-shadow: 0 0 15px rgba(96,165,250,0.5);">ERP CORE</div>
+                        <ul class="impact-list" style="gap: 1rem;">
+                            <li><i class="fa-solid fa-arrows-rotate text-blue"></i> Data synchronization</li>
+                            <li><i class="fa-solid fa-gears text-blue"></i> Workflow automation</li>
+                            <li><i class="fa-solid fa-brain text-blue"></i> Intelligent processing</li>
+                            <li><i class="fa-solid fa-network-wired text-blue"></i> Integration lines</li>
+                        </ul>
+                    </div>
+
+                    <!-- Connector 2 -->
+                    <div class="impact-connector">
+                        <div class="c-beam-vertical mobile-only"></div>
+                        <div class="c-beam-horizontal desktop-only"></div>
+                        <i class="fa-solid fa-arrow-down mobile-only"></i>
+                        <i class="fa-solid fa-arrow-right desktop-only"></i>
+                    </div>
+
+                    <!-- Right: AFTER -->
+                    <div class="impact-panel impact-after glass-card">
+                        <div class="panel-header text-green">AFTER</div>
+                        <ul class="impact-list">
+                            <li><i class="fa-solid fa-chart-column text-green"></i> Modern analytics</li>
+                            <li><i class="fa-solid fa-users text-green"></i> Team collaboration</li>
+                            <li><i class="fa-solid fa-lightbulb text-green"></i> Real-time insights</li>
+                            <li><i class="fa-solid fa-robot text-green"></i> Automated workflows</li>
+                            <li><i class="fa-solid fa-sitemap text-green"></i> Connected departments</li>
+                            <li><i class="fa-solid fa-gauge-high text-green"></i> KPI widgets</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Progress Timeline -->
+                <div class="impact-timeline">
+                    <div class="t-label start">Traditional Business</div>
+                    <div class="t-track">
+                        <div class="t-fill"></div>
+                        <div class="t-indicator"><i class="fa-solid fa-microchip"></i></div>
+                    </div>
+                    <div class="t-label end blue-text">Modern ERP Growth</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: A Day With ERP -->
+        <section class="day-with-erp section-padding bg-navy">
+            <div class="day-bg-elements">
+                <div class="day-grid"></div>
+                <div class="day-glow"></div>
+                <div class="day-particles" id="dayParticles"></div>
+            </div>
+            <div class="container text-center" style="position: relative; z-index: 2;">
+                <div class="section-header">
+                    <div class="section-pill">A DAY WITH ERP</div>
+                    <h2>One Platform Managing Every Business Moment</h2>
+                    <p class="mx-auto" style="max-width: 650px; margin-left: auto; margin-right: auto;">Follow how sales, inventory, finance, teams, and analytics work together seamlessly through a connected ERP ecosystem.</p>
+                </div>
+                
+                <div class="day-timeline-wrapper">
+                    <!-- Central connection line -->
+                    <div class="day-timeline-line">
+                        <div class="day-timeline-progress"></div>
+                    </div>
+                    
+                    <div class="day-steps-container">
+                        <!-- Step 1: Sales -->
+                        <div class="day-step">
+                            <div class="day-card glass-card">
+                                <div class="day-card-header">Sales Team</div>
+                                <div class="day-image-wrap">
+                                    <img src="Images/img_0be787cd.webp" alt="Sales Team">
+                                </div>
+                                <div class="day-caption">New Orders</div>
+                            </div>
+                            <div class="day-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="day-time">08:00 AM</div>
+                        </div>
+
+                        <!-- Step 2: Inventory -->
+                        <div class="day-step">
+                            <div class="day-card glass-card">
+                                <div class="day-card-header">Warehouse</div>
+                                <div class="day-image-wrap">
+                                    <img src="Images/img_776ee50c.webp" alt="Warehouse">
+                                </div>
+                                <div class="day-caption">Stock Sync</div>
+                            </div>
+                            <div class="day-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="day-time">10:30 AM</div>
+                        </div>
+
+                        <!-- Step 3: Finance -->
+                        <div class="day-step">
+                            <div class="day-card glass-card">
+                                <div class="day-card-header">Finance</div>
+                                <div class="day-image-wrap">
+                                    <img src="Images/img_c937daa1.webp" alt="Finance">
+                                </div>
+                                <div class="day-caption">Invoice Ready</div>
+                            </div>
+                            <div class="day-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="day-time">01:00 PM</div>
+                        </div>
+
+                        <!-- Step 4: Teams -->
+                        <div class="day-step">
+                            <div class="day-card glass-card">
+                                <div class="day-card-header">Teams</div>
+                                <div class="day-image-wrap">
+                                    <img src="Images/img_830c6f1e.webp" alt="Teams">
+                                </div>
+                                <div class="day-caption">Team Review</div>
+                            </div>
+                            <div class="day-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="day-time">04:00 PM</div>
+                        </div>
+
+                        <!-- Step 5: Analytics -->
+                        <div class="day-step">
+                            <div class="day-card glass-card">
+                                <div class="day-card-header">Analytics</div>
+                                <div class="day-image-wrap">
+                                    <img src="Images/img_c0a4445b.webp" alt="Analytics">
+                                </div>
+                                <div class="day-caption">Daily Report</div>
+                            </div>
+                            <div class="day-time">07:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Business Challenge Center -->
+        <section class="challenge-center-section section-padding bg-dark">
+            <div class="growth-bg-grid"></div>
+            <div class="container text-center" style="position: relative; z-index: 2;">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-pill">BUSINESS CHALLENGE CENTER</div>
+                    <h2>Built To Solve Real Business Challenges</h2>
+                    <p class="mx-auto" style="max-width: 650px; margin-left: auto; margin-right: auto;">Every organization faces unique operational problems. Our ERP solutions are designed to remove complexity and create smarter workflows.</p>
+                </div>
+                
+                <!-- Interactive Challenge Control Panel -->
+                <div class="challenge-control-panel">
+                    <!-- Tabs -->
+                    <div class="ccp-tabs">
+                        <button class="ccp-tab active" data-target="finance"><i class="fa-solid fa-chart-line"></i> Finance</button>
+                        <button class="ccp-tab" data-target="operations"><i class="fa-solid fa-boxes-stacked"></i> Operations</button>
+                        <button class="ccp-tab" data-target="workforce"><i class="fa-solid fa-users-gear"></i> Workforce</button>
+                        <button class="ccp-tab" data-target="crm"><i class="fa-solid fa-handshake"></i> Customers</button>
+                    </div>
+
+                    <!-- Content Panels -->
+                    <div class="ccp-content-container glass-panel">
+                        
+                        <!-- Finance -->
+                        <div class="ccp-panel active" id="panel-finance">
+                            <div class="ccp-box ccp-problem">
+                                <div class="ccp-icon-wrap red-wrap"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                                <h3>The Challenge</h3>
+                                <ul class="ccp-list">
+                                    <li><i class="fa-solid fa-xmark"></i> Delayed financial reports</li>
+                                    <li><i class="fa-solid fa-xmark"></i> Manual accounting & errors</li>
+                                    <li><i class="fa-solid fa-xmark"></i> Fragmented spreadsheets</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="ccp-bridge">
+                                <div class="c-beam"></div>
+                                <div class="c-beam-pulse"></div>
+                                <div class="c-solution-node">
+                                    <div class="c-node-icon"><i class="fa-solid fa-coins"></i></div>
+                                    <div class="c-node-title">Finance Suite</div>
+                                </div>
+                            </div>
+
+                            <div class="ccp-box ccp-impact">
+                                <div class="ccp-icon-wrap green-wrap"><i class="fa-solid fa-bolt"></i></div>
+                                <h3>Business Impact</h3>
+                                <div class="impact-highlight">Faster Reports</div>
+                                <p>Real-time visibility, automated reconciliation, and instant ledger updates.</p>
+                            </div>
+                        </div>
+
+                        <!-- Operations -->
+                        <div class="ccp-panel" id="panel-operations">
+                            <div class="ccp-box ccp-problem">
+                                <div class="ccp-icon-wrap red-wrap"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                                <h3>The Challenge</h3>
+                                <ul class="ccp-list">
+                                    <li><i class="fa-solid fa-xmark"></i> Supply chain blind spots</li>
+                                    <li><i class="fa-solid fa-xmark"></i> Frequent stockouts</li>
+                                    <li><i class="fa-solid fa-xmark"></i> Disjointed manufacturing</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="ccp-bridge">
+                                <div class="c-beam"></div>
+                                <div class="c-beam-pulse"></div>
+                                <div class="c-solution-node">
+                                    <div class="c-node-icon"><i class="fa-solid fa-boxes-packing"></i></div>
+                                    <div class="c-node-title">Ops & Supply Chain</div>
+                                </div>
+                            </div>
+
+                            <div class="ccp-box ccp-impact">
+                                <div class="ccp-icon-wrap green-wrap"><i class="fa-solid fa-truck-fast"></i></div>
+                                <h3>Business Impact</h3>
+                                <div class="impact-highlight">Optimized Flows</div>
+                                <p>Seamless inventory tracking, predictive ordering, and reduced overhead.</p>
+                            </div>
+                        </div>
+
+                        <!-- Workforce -->
+                        <div class="ccp-panel" id="panel-workforce">
+                            <div class="ccp-box ccp-problem">
+                                <div class="ccp-icon-wrap red-wrap"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                                <h3>The Challenge</h3>
+                                <ul class="ccp-list">
+                                    <li><i class="fa-solid fa-xmark"></i> Siloed HR data</li>
+                                    <li><i class="fa-solid fa-xmark"></i> Payroll inaccuracies</li>
+                                    <li><i class="fa-solid fa-xmark"></i> Poor employee tracking</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="ccp-bridge">
+                                <div class="c-beam"></div>
+                                <div class="c-beam-pulse"></div>
+                                <div class="c-solution-node">
+                                    <div class="c-node-icon"><i class="fa-solid fa-users"></i></div>
+                                    <div class="c-node-title">HR & Payroll Hub</div>
+                                </div>
+                            </div>
+
+                            <div class="ccp-box ccp-impact">
+                                <div class="ccp-icon-wrap green-wrap"><i class="fa-solid fa-people-group"></i></div>
+                                <h3>Business Impact</h3>
+                                <div class="impact-highlight">Empowered Teams</div>
+                                <p>Automated HR workflows, precise payroll, and better talent management.</p>
+                            </div>
+                        </div>
+
+                        <!-- CRM -->
+                        <div class="ccp-panel" id="panel-crm">
+                            <div class="ccp-box ccp-problem">
+                                <div class="ccp-icon-wrap red-wrap"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                                <h3>The Challenge</h3>
+                                <ul class="ccp-list">
+                                    <li><i class="fa-solid fa-xmark"></i> Disconnected customer data</li>
+                                    <li><i class="fa-solid fa-xmark"></i> Slow support response</li>
+                                    <li><i class="fa-solid fa-xmark"></i> Missed sales opportunities</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="ccp-bridge">
+                                <div class="c-beam"></div>
+                                <div class="c-beam-pulse"></div>
+                                <div class="c-solution-node">
+                                    <div class="c-node-icon"><i class="fa-solid fa-handshake"></i></div>
+                                    <div class="c-node-title">CRM & Sales</div>
+                                </div>
+                            </div>
+
+                            <div class="ccp-box ccp-impact">
+                                <div class="ccp-icon-wrap green-wrap"><i class="fa-solid fa-heart-circle-check"></i></div>
+                                <h3>Business Impact</h3>
+                                <div class="impact-highlight">Higher Retention</div>
+                                <p>360-degree customer view, targeted outreach, and accelerated sales cycles.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Final CTA (Updated with Background Image) -->
+        <section class="sol-cta section-padding cta-bg-image" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1920');">
+            <div class="cta-overlay"></div>
+            <!-- Decorative Glowing Orbs -->
+            <div class="cta-orb orb-1"></div>
+            <div class="cta-orb orb-2"></div>
+            
+            <div class="container">
+                <div class="cta-grid glass-card">
+                    <div class="cta-content text-center">
+                        <h2>Discover The ERP Solution Your Business Needs</h2>
+                        <p>Connect with our experts and build a solution designed around your operations.</p>
+                        <div class="cta-actions">
+                            <a href="404.html" class="btn btn-primary">Find My Solution</a>
+                            <a href="404.html" class="btn btn-outline">Request Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="f-brand">
+                    <a href="index.html" class="logo">
+                        <img src="Images/img_03252981.webp" alt="Stackly Logo" style="height: 90px; width: auto;">
+                    </a>
+                    <p>The intelligent enterprise management platform built for scale.</p>
+                    <div class="f-social">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <form class="f-newsletter" action="404.html" method="GET">
+                        <input type="email" placeholder="Enter email" required>
+                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+                
+                <div class="f-accordion">
+                    <div class="f-col">
+                        <h4 class="acc-toggle">Quick Links <i class="fa-solid fa-chevron-down mobile-only"></i></h4>
+                        <ul class="acc-content">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="platform.html">Platform</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="f-col">
+                        <h4 class="acc-toggle">Support <i class="fa-solid fa-chevron-down mobile-only"></i></h4>
+                        <ul class="acc-content">
+                            <li><a href="404.html">Help Center</a></li>
+                            <li><a href="404.html">FAQ</a></li>
+                            <li><a href="404.html">Documentation</a></li>
+                            <li><a href="404.html">Privacy Policy</a></li>
+                            <li><a href="404.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="f-col contact-col">
+                        <h4 class="acc-toggle">Connect <i class="fa-solid fa-chevron-down mobile-only"></i></h4>
+                        <ul class="acc-content contact-info">
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span><strong>Office Address:</strong><br>Salem, India</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <span><strong>Phone:</strong><br>+91 98765 43210</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong>Sales Email:</strong><br>info@stackly.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="f-bottom">
+                <p>&copy; 2026 Stackly Technologies. All rights reserved.</p>
+                <div class="f-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/solutions.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
+        });
+    </script>
+</body>
+</html>

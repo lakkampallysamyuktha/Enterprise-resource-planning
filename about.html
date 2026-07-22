@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Enterprise ERP SaaS</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css?v=4">
+    <link rel="stylesheet" href="css/about.css?v=2">
+</head>
+<body>
+    
+    <!-- Header Design: Floating Glass Navbar -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="Images/img_03252981.webp" alt="Stackly Logo" style="height: 45px; width: auto; transform: scale(1.5); transform-origin: left center;">
+            </a>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="platform.html">Platform</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <a href="login.html" class="btn btn-login desktop-only">Login</a>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Animated Mobile Drawer -->
+        <div class="mobile-drawer" id="mobileDrawer">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="platform.html">Platform</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="mobile-actions">
+                    <a href="login.html" class="btn btn-login mobile-btn">Login</a>
+                    <a href="404.html" class="btn btn-primary mobile-btn">Request Demo</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Who We Are -->
+        <section class="abt-hero section-padding">
+            <div class="container">
+                <div class="abt-hero-grid">
+                    <div class="abt-hero-content">
+                        <div class="hero-badge">
+                            <i class="fa-solid fa-building"></i> ABOUT OUR COMPANY
+                        </div>
+                        <h1>Powering Modern Businesses Through <span class="blue-text">Intelligent ERP</span></h1>
+                        
+                        <div class="abt-hero-visual mobile-visual">
+                            <div class="visual-layer layer-1 glass-card">
+                                <div class="mock-dash-header">
+                                    <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                                    <span>Workspace</span>
+                                </div>
+                                <div class="mock-dash-body" style="padding: 0;">
+                                    <img src="Images/img_c80a823e.webp" alt="ERP Dashboard" style="width: 100%; height: 200px; object-fit: cover; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; display: block;">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="hero-story">We build intelligent ERP solutions that connect finance, operations, inventory, sales, and teams into one seamless ecosystem. Designed for growing businesses, our platform simplifies complex workflows and helps organizations make smarter decisions.</p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-box"><h3 class="counter" data-target="15000">0</h3><p>Global Customers</p></div>
+                            <div class="stat-box"><h3 class="counter" data-target="99.99">0</h3><p>Uptime %</p></div>
+                        </div>
+                    </div>
+                    <div class="abt-hero-visual desktop-visual">
+                        <div class="visual-layer layer-1 glass-card" style="padding: 0;">
+                            <div class="mock-dash-header">
+                                <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                                <span>Operations Dashboard</span>
+                            </div>
+                            <div class="mock-dash-body" style="padding: 0;">
+                                <img src="Images/img_c80a823e.webp" alt="ERP Dashboard" style="width: 100%; height: 300px; object-fit: cover; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; display: block;">
+                            </div>
+                        </div>
+                        <div class="visual-layer layer-2 glass-panel" style="padding: 0.5rem; background: rgba(0,0,0,0.4);">
+                            <img src="Images/img_6fa775e6.webp" alt="Analytics Chart" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        </div>
+                        <div class="visual-layer layer-3 glass-card">
+                            <div class="mock-kpi">
+                                <i class="fa-solid fa-bolt blue-text"></i>
+                                <span>System Active</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Our ERP Journey -->
+        <section class="abt-journey section-padding bg-dark">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-pill">Our History</span>
+                    <h2>From Startup Vision To Enterprise Platform</h2>
+                </div>
+                
+                <div class="timeline-wrapper">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-progress"></div>
+                    
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="year-badge">2018</span>
+                            <h4>Platform Concept</h4>
+                            <p>The original vision for a unified business system was drafted, focusing on eliminating data silos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="year-badge">2020</span>
+                            <h4>First ERP Modules Launched</h4>
+                            <p>We released core finance and inventory modules, serving our first 100 early adopters.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="year-badge">2022</span>
+                            <h4>Cloud Transformation</h4>
+                            <p>Completely rebuilt the architecture for native cloud deployment and enterprise scale.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="year-badge">2024</span>
+                            <h4>AI-Powered Automation</h4>
+                            <p>Integrated intelligent workflows and predictive analytics to automate routine tasks.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="year-badge">2026</span>
+                            <h4>Global Enterprise Expansion</h4>
+                            <p>Scaling operations globally, trusted by thousands of enterprise organizations worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: How We Operate -->
+        <section class="abt-operate section-padding bg-navy">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-pill">Architecture</span>
+                    <h2>One System Behind Every Business Function</h2>
+                    <p class="mx-auto" style="max-width: 600px; margin-left: auto; margin-right: auto;">Our ERP architecture connects every department through real-time synchronization, helping businesses eliminate silos and operate efficiently.</p>
+                </div>
+                
+                <div class="operate-hub">
+                    <svg class="hub-connections desktop-only" viewBox="0 0 1000 600" preserveAspectRatio="none">
+                        <path class="hub-line h-path-1" d="M500,300 L250,150" />
+                        <path class="hub-line h-path-2" d="M500,300 L250,450" />
+                        <path class="hub-line h-path-3" d="M500,300 L750,150" />
+                        <path class="hub-line h-path-4" d="M500,300 L750,450" />
+                        <path class="hub-line h-path-5" d="M500,300 L500,80" />
+                        <path class="hub-line h-path-6" d="M500,300 L500,520" />
+                    </svg>
+
+                    <div class="hub-center glass-card">
+                        <div class="mock-dash-header">
+                            <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                            <span>Core Engine</span>
+                        </div>
+                        <div class="hub-pulse"></div>
+                        <i class="fa-solid fa-server blue-text"></i>
+                        <h5>Real-time Sync</h5>
+                    </div>
+                    
+                    <div class="hub-nodes">
+                        <div class="hub-node node-1 glass-panel">
+                            <i class="fa-solid fa-coins"></i>
+                            <h6>Finance Management</h6>
+                            <div class="mini-widget">Ledger Active</div>
+                        </div>
+                        <div class="hub-node node-2 glass-panel">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                            <h6>Inventory Control</h6>
+                            <div class="mini-widget">Live Tracking</div>
+                        </div>
+                        <div class="hub-node node-3 glass-panel">
+                            <i class="fa-solid fa-users"></i>
+                            <h6>CRM Workspace</h6>
+                            <div class="mini-widget">Lead Sync</div>
+                        </div>
+                        <div class="hub-node node-4 glass-panel">
+                            <i class="fa-solid fa-id-badge"></i>
+                            <h6>Human Resources</h6>
+                            <div class="mini-widget">Payroll Hub</div>
+                        </div>
+                        <div class="hub-node node-5 glass-panel">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <h6>Analytics Engine</h6>
+                            <div class="mini-widget">Data Feed</div>
+                        </div>
+                        <div class="hub-node node-6 glass-panel">
+                            <i class="fa-solid fa-robot"></i>
+                            <h6>Automation Center</h6>
+                            <div class="mini-widget">Bots Running</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: How Enterprises Run With ERP -->
+        <section class="abt-flow section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="hero-badge"><i class="fa-solid fa-diagram-project"></i> PLATFORM ECOSYSTEM</div>
+                    <h2>One Platform Behind Every Business Decision</h2>
+                    <p class="mx-auto" style="max-width: 600px; margin-left: auto; margin-right: auto;">See how departments collaborate, automate, and scale through a connected ERP ecosystem.</p>
+                </div>
+                
+                <div class="flow-container">
+                    <svg class="flow-lines desktop-only" viewBox="0 0 1000 500" preserveAspectRatio="none">
+                        <!-- Left to Center -->
+                        <path class="f-line" d="M 250 125 L 500 250" />
+                        <path class="f-line" d="M 250 375 L 500 250" />
+                        <!-- Center to Right -->
+                        <path class="f-line" d="M 500 250 L 750 125" />
+                        <path class="f-line" d="M 500 250 L 750 375" />
+                    </svg>
+                    
+                    <div class="flow-col f-left">
+                        <div class="flow-card glass-panel">Finance Management</div>
+                        <div class="flow-card glass-panel">Inventory Control</div>
+                        <div class="flow-card glass-panel">Human Resources</div>
+                        <div class="flow-card glass-panel">Customer Relations</div>
+                    </div>
+                    
+                    <div class="flow-col f-center">
+                        <div class="flow-engine glass-card">
+                            <div class="engine-pulse"></div>
+                            <i class="fa-solid fa-microchip blue-text" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                            <h4>ERP Processing Engine</h4>
+                            <ul class="engine-list">
+                                <li><i class="fa-solid fa-check"></i> Real-time sync</li>
+                                <li><i class="fa-solid fa-check"></i> Workflow automation</li>
+                                <li><i class="fa-solid fa-check"></i> Central database</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-col f-right">
+                        <div class="flow-card glass-panel">Revenue reports</div>
+                        <div class="flow-card glass-panel">Team productivity</div>
+                        <div class="flow-card glass-panel">Inventory forecasting</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Our Approach -->
+        <section class="abt-approach section-padding bg-dark">
+            <div class="container text-center">
+                <div class="section-header">
+                    <div class="hero-badge"><i class="fa-solid fa-list-check"></i> OUR APPROACH</div>
+                    <h2>Building ERP Around Real Business Challenges</h2>
+                    <p class="mx-auto" style="max-width: 600px; margin-left: auto; margin-right: auto;">Every feature, workflow, and integration is designed to simplify operations and help companies scale confidently.</p>
+                </div>
+                
+                <div class="approach-tree">
+                    <!-- SVG Connectors for Desktop/Tablet -->
+                    <svg class="tree-lines desktop-only" viewBox="0 0 1000 800" preserveAspectRatio="none">
+                        <!-- Discover to Integrate -->
+                        <path class="tree-path" d="M 500 200 L 500 270 L 250 270 L 250 320" />
+                        <!-- Discover to Automate -->
+                        <path class="tree-path" d="M 500 200 L 500 270 L 750 270 L 750 320" />
+                        <!-- Integrate to Optimize -->
+                        <path class="tree-path" d="M 250 480 L 250 560 L 500 560 L 500 620" />
+                        <!-- Automate to Optimize -->
+                        <path class="tree-path" d="M 750 480 L 750 560 L 500 560 L 500 620" />
+                    </svg>
+
+                    <!-- Mobile connection line -->
+                    <div class="mobile-tree-line mobile-only"></div>
+
+                    <!-- Nodes -->
+                    <div class="t-node t-discover glass-panel">
+                        <div class="node-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h4>Discover</h4>
+                        <p>Understand business operations and growth goals.</p>
+                    </div>
+                    
+                    <div class="t-node t-integrate glass-panel">
+                        <div class="node-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <h4>Integrate</h4>
+                        <p>Connect finance, inventory, HR, CRM.</p>
+                    </div>
+                    
+                    <div class="t-node t-automate glass-panel">
+                        <div class="node-icon"><i class="fa-solid fa-robot"></i></div>
+                        <h4>Automate</h4>
+                        <p>Reduce repetitive workflows.</p>
+                    </div>
+                    
+                    <div class="t-node t-optimize glass-panel">
+                        <div class="node-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h4>Optimize</h4>
+                        <p>Improve performance with analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Built For The Future Of Enterprise -->
+        <section class="abt-future section-padding bg-navy">
+            <div class="container text-center">
+                <div class="section-header">
+                    <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> ENTERPRISE READY</div>
+                    <h2>Built For The Future Of Enterprise</h2>
+                    <p class="mx-auto" style="max-width: 600px; margin-left: auto; margin-right: auto;">From fast-growing startups to large organizations, our ERP platform evolves with every stage of your business journey.</p>
+                </div>
+                
+                <div class="future-layout">
+                    <div class="f-hero glass-card" style="padding:0; overflow:hidden; position: relative;">
+                        <img src="Images/img_eae9757c.webp" alt="Large Office Workspace" style="width:100%; display:block;" id="f-hero-img">
+                        <div class="f-badge glass-panel"><i class="fa-solid fa-bolt blue-text"></i> Powering Teams Across Industries</div>
+                    </div>
+                    
+                    <div class="f-timeline">
+                        <div class="f-item glass-panel" data-img="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+                            <div class="f-dot"></div>
+                            <h4><i class="fa-solid fa-cloud blue-text"></i> Smart Infrastructure</h4>
+                            <p>Built on a cloud-native foundation that keeps teams connected across locations and departments.</p>
+                        </div>
+                        <div class="f-item glass-panel" data-img="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+                            <div class="f-dot"></div>
+                            <h4><i class="fa-solid fa-sliders blue-text"></i> Adaptive Workflows</h4>
+                            <p>Customize approvals, processes, and operations to match the way your company works.</p>
+                        </div>
+                        <div class="f-item glass-panel" data-img="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+                            <div class="f-dot"></div>
+                            <h4><i class="fa-solid fa-lock blue-text"></i> Enterprise Security</h4>
+                            <p>Advanced encryption, role-based permissions, and secure access controls.</p>
+                        </div>
+                        <div class="f-item glass-panel" data-img="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+                            <div class="f-dot"></div>
+                            <h4><i class="fa-solid fa-lightbulb blue-text"></i> Continuous Innovation</h4>
+                            <p>Regular platform improvements designed for modern business challenges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Our Commitment -->
+        <section class="abt-commitment section-padding">
+            <div class="container text-center">
+                <div class="section-header">
+                    <h2>More Than Software. A Partner In Growth.</h2>
+                    <p class="mx-auto" style="max-width: 600px; margin-left: auto; margin-right: auto;">We believe technology should simplify operations, empower teams, and create opportunities for long-term success.</p>
+                </div>
+                
+                <div class="commit-tree">
+                    <!-- SVG Connectors for Desktop -->
+                    <svg class="commit-lines desktop-only" viewBox="0 0 1000 600" preserveAspectRatio="none">
+                        <!-- Left branch -->
+                        <path class="c-path" d="M 500 150 L 500 300 L 250 300 L 250 480" />
+                        <!-- Right branch -->
+                        <path class="c-path" d="M 500 150 L 500 300 L 750 300 L 750 480" />
+                    </svg>
+
+                    <!-- Mobile connection line -->
+                    <div class="mobile-commit-line mobile-only"></div>
+
+                    <!-- Nodes -->
+                    <div class="c-hero glass-card" style="padding:0; overflow:hidden;">
+                        <img src="Images/img_0e9ad36e.webp" alt="Team Discussion" style="width:100%; display:block;">
+                    </div>
+                    
+                    <div class="c-node c-support glass-panel">
+                        <i class="fa-solid fa-handshake-angle blue-text" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                        <h4>Trusted Support</h4>
+                        <p>Our specialists work alongside your team to ensure smooth implementation and ongoing success.</p>
+                    </div>
+                    
+                    <div class="c-node c-vision glass-panel">
+                        <i class="fa-solid fa-eye blue-text" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                        <h4>Long-Term Vision</h4>
+                        <p>We continuously enhance our ERP ecosystem to support changing business needs.</p>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium ERP CTA Section -->
+        <section class="premium-cta bg-dark">
+            <!-- Background Image -->
+            <div class="cta-bg-img">
+                <img src="Images/img_be94160a.webp" alt="ERP Team Collaboration">
+            </div>
+            
+            <!-- Overlays -->
+            <div class="cta-overlay-dark"></div>
+            <div class="cta-overlay-grid"></div>
+            <div class="cta-radial-glow"></div>
+            
+            <!-- Particles Container -->
+            <div class="cta-particles">
+                <div class="particle p-1"></div>
+                <div class="particle p-2"></div>
+                <div class="particle p-3"></div>
+                <div class="particle p-4"></div>
+            </div>
+
+            <div class="container cta-container">
+                <!-- Content Box -->
+                <div class="cta-content-box glass-card">
+                    <h2>The Operating System Behind Modern Enterprises</h2>
+                    <p>Connect teams, automate workflows, and manage every operation from one platform.</p>
+                    <div class="cta-btns">
+                        <a href="404.html" class="btn btn-primary btn-glow">Experience ERP</a>
+                        <a href="404.html" class="btn btn-secondary">Speak With Our Team</a>
+                    </div>
+                </div>
+
+                <!-- Stats Footer -->
+                <div class="cta-stats">
+                    <div class="stat-box glass-panel">
+                        <div class="s-val cta-num">1500</div>
+                        <div class="s-label">Clients</div>
+                    </div>
+                    <div class="stat-box glass-panel">
+                        <div class="s-val cta-num">99.99</div>
+                        <div class="s-label">Uptime</div>
+                    </div>
+                    <div class="stat-box glass-panel">
+                        <div class="s-val cta-num">50000000</div>
+                        <div class="s-label">Tasks</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="f-brand">
+                    <a href="index.html" class="logo">
+                        <img src="Images/img_03252981.webp" alt="Stackly Logo" style="height: 90px; width: auto;">
+                    </a>
+                    <p>The intelligent enterprise management platform built for scale.</p>
+                    <div class="f-social">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <form class="f-newsletter" action="404.html" method="GET">
+                        <input type="email" placeholder="Enter email" required>
+                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+                
+                <div class="f-accordion">
+                    <div class="f-col">
+                        <h4 class="acc-toggle">Quick Links <i class="fa-solid fa-chevron-down mobile-only"></i></h4>
+                        <ul class="acc-content">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="platform.html">Platform</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="f-col">
+                        <h4 class="acc-toggle">Support <i class="fa-solid fa-chevron-down mobile-only"></i></h4>
+                        <ul class="acc-content">
+                            <li><a href="404.html">Help Center</a></li>
+                            <li><a href="404.html">FAQ</a></li>
+                            <li><a href="404.html">Documentation</a></li>
+                            <li><a href="404.html">Privacy Policy</a></li>
+                            <li><a href="404.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="f-col contact-col">
+                        <h4 class="acc-toggle">Connect <i class="fa-solid fa-chevron-down mobile-only"></i></h4>
+                        <ul class="acc-content contact-info">
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span><strong>Office Address:</strong><br>Salem, India</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <span><strong>Phone:</strong><br>+91 98765 43210</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong>Sales Email:</strong><br>info@stackly.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="f-bottom">
+                <p>&copy; 2026 Stackly Technologies. All rights reserved.</p>
+                <div class="f-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>

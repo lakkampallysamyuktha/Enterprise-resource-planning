@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Control Center - Stackly ERP</title>
+    <meta name="description" content="Stackly ERP Admin Control Center">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <style>
+        .health-btns {
+            display: flex;
+            gap: 10px;
+        }
+        @media (max-width: 768px) {
+            .health-btns {
+                flex-direction: column;
+                width: 100%;
+            }
+            .health-btns .btn {
+                width: 100%;
+                margin-right: 0 !important;
+            }
+        }
+        /* Ensure sticky topbar works */
+        html, body, .app-layout, .main-wrap {
+            overflow-x: visible;
+        }
+        /* Strict lock for mobile sidebar to prevent background scroll */
+        html:has(body.no-scroll),
+        body.no-scroll {
+            overflow: hidden !important;
+            touch-action: none !important;
+        }
+        /* Fix z-index so topbar stays above content */
+        .topbar {
+            z-index: 150 !important;
+        }
+    </style>
+</head>
+<body class="app-layout">
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <img src="Images/img_03252981.webp" alt="Stackly">
+            <span class="role-badge" id="sidebar-role" style="background: rgba(239, 68, 68, 0.25); color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">Admin</span>
+        </div>
+        <button class="close-sidebar-btn" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+
+        <nav class="sidebar-nav">
+            <span class="nav-section-label">Monitoring</span>
+            <a href="#" class="nav-link active" onclick="switchTab(event, 'health')">
+                <i class="fa-solid fa-server"></i> System Health
+            </a>
+            <a href="#" class="nav-link" onclick="switchTab(event, 'logs')">
+                <i class="fa-solid fa-clipboard-list"></i> Access Logs
+            </a>
+
+            <div class="nav-divider"></div>
+            
+            <span class="nav-section-label">Access Control</span>
+            <a href="#" class="nav-link" onclick="switchTab(event, 'roles')">
+                <i class="fa-solid fa-user-shield"></i> Role Management
+            </a>
+
+            <div class="nav-divider"></div>
+
+            <span class="nav-section-label">System</span>
+            <a href="#" class="nav-link" onclick="switchTab(event, 'backups')">
+                <i class="fa-solid fa-database"></i> Data Backups
+            </a>
+            <a href="#" class="nav-link" onclick="switchTab(event, 'integrations')">
+                <i class="fa-solid fa-plug"></i> Integrations
+            </a>
+            <a href="#" class="nav-link" onclick="switchTab(event, 'settings')">
+                <i class="fa-solid fa-gear"></i> Settings
+            </a>
+            <a href="login.html" class="nav-link logout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-ava" style="background: linear-gradient(135deg, #ef4444, #991b1b);">AS</div>
+            <div class="user-info">
+                <div class="uname">Admin System</div>
+                <div class="uemail">admin@stackly.com</div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-wrap">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                <div class="topbar-title">Admin Control Center</div>
+            </div>
+            <div class="topbar-right">
+                <a href="404.html" class="notif-btn">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="notif-dot"></div>
+                </a>
+            </div>
+        </header>
+
+        <!-- Page Body -->
+        <div class="page-body">
+            
+            <!-- HEALTH TAB -->
+            <div id="tab-health" class="admin-tab-content">
+                <!-- Platform Health Header -->
+                <div class="sec-head" style="margin-top: 10px;">
+                    <h2>Platform Health</h2>
+                    <div class="health-btns">
+                        <button class="btn" style="background: rgba(255,255,255,0.1); color: white; border: none;" onclick="window.location.href='404.html'">View Logs</button>
+                        <button class="btn btn-primary" onclick="window.location.href='404.html'">Restart Services</button>
+                    </div>
+                </div>
+
+                <!-- KPIs -->
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: rgba(16,185,129,0.1); color: #10B981;"><i class="fa-solid fa-network-wired"></i></div>
+                        <div class="kpi-info">
+                            <span>API Uptime</span>
+                            <h4>99.98%</h4>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: rgba(245,158,11,0.1); color: #F59E0B;"><i class="fa-solid fa-database"></i></div>
+                        <div class="kpi-info">
+                            <span>Database Load</span>
+                            <h4>42%</h4>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon"><i class="fa-solid fa-users"></i></div>
+                        <div class="kpi-info">
+                            <span>Active Sessions</span>
+                            <h4>1,284</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin Grid -->
+                <div class="dashboard-grid">
+                    <!-- Graph Section -->
+                    <div class="glass-card p-4">
+                        <h3 class="mb-4">System Load (24h)</h3>
+                        <div class="bar-graph">
+                            <div class="bar" style="height: 30%;"></div>
+                            <div class="bar" style="height: 50%;"></div>
+                            <div class="bar" style="height: 40%;"></div>
+                            <div class="bar" style="height: 70%;"></div>
+                            <div class="bar bar-danger" style="height: 90%;"></div>
+                            <div class="bar" style="height: 60%;"></div>
+                            <div class="bar" style="height: 80%;"></div>
+                            <div class="bar" style="height: 50%;"></div>
+                            <div class="bar" style="height: 40%;"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-top: 10px; color: rgba(255,255,255,0.5); font-size: 0.8rem;">
+                            <span>00:00</span>
+                            <span>06:00</span>
+                            <span>12:00</span>
+                            <span>18:00</span>
+                            <span>Now</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Server Stats -->
+                    <div class="glass-card p-4">
+                        <h3 class="mb-4">Resources</h3>
+                        <div class="resource-row">
+                            <div class="resource-label"><span>CPU Usage</span><span>78%</span></div>
+                            <div class="progress-track"><div class="progress-fill bg-danger" style="width: 78%;"></div></div>
+                        </div>
+                        <div class="resource-row">
+                            <div class="resource-label"><span>Memory</span><span>45%</span></div>
+                            <div class="progress-track"><div class="progress-fill bg-success" style="width: 45%;"></div></div>
+                        </div>
+                        <div class="resource-row">
+                            <div class="resource-label"><span>Storage</span><span>62%</span></div>
+                            <div class="progress-track"><div class="progress-fill bg-warning" style="width: 62%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid single-column">
+                    <div class="glass-card p-4">
+                        <div class="sec-head" style="margin-bottom: 15px;">
+                            <h3 class="mb-0">Recent User Registrations</h3>
+                            <button class="btn btn-outline" onclick="window.location.href='404.html'">View All</button>
+                        </div>
+                        <div class="data-table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr><th>User</th><th>Company</th><th>Role</th><th>Registered</th><th>Status</th><th>Action</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="user-cell">
+                                                <div class="avatar bg-blue">JD</div>
+                                                Jane Doe
+                                            </div>
+                                        </td>
+                                        <td>TechCorp</td>
+                                        <td>Manager</td>
+                                        <td>Jul 22, 2026</td>
+                                        <td><span class="status-badge active">Active</span></td>
+                                        <td>
+                                            <button class="action-btn text-blue" onclick="window.location.href='404.html'"><i class="fa-solid fa-pen-to-square"></i></button>
+                                            <button class="action-btn text-red" onclick="window.location.href='404.html'"><i class="fa-solid fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="user-cell">
+                                                <div class="avatar bg-purple">MS</div>
+                                                Mark Smith
+                                            </div>
+                                        </td>
+                                        <td>Global Logistics</td>
+                                        <td>User</td>
+                                        <td>Jul 21, 2026</td>
+                                        <td><span class="status-badge pending">Awaiting Review</span></td>
+                                        <td>
+                                            <button class="action-btn text-green" onclick="window.location.href='404.html'"><i class="fa-solid fa-check"></i></button>
+                                            <button class="action-btn text-red" onclick="window.location.href='404.html'"><i class="fa-solid fa-xmark"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Dashboard Tab -->
+
+            <!-- LOGS TAB -->
+            <div id="tab-logs" class="admin-tab-content" style="display: none;">
+            <div class="sec-head">
+                <h2>Access Logs</h2>
+                <button class="btn btn-outline" onclick="window.location.href='404.html'">Export CSV</button>
+            </div>
+            <div class="glass-card p-4">
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>User</th>
+                                <th>Action</th>
+                                <th>IP Address</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2026-07-22 10:45 AM</td>
+                                <td><div class="user-cell"><div class="avatar bg-blue">JD</div>Jane Doe</div></td>
+                                <td>Login successful</td>
+                                <td>192.168.1.14</td>
+                                <td><span class="status-badge active">Success</span></td>
+                            </tr>
+                            <tr>
+                                <td>2026-07-22 10:42 AM</td>
+                                <td><div class="user-cell"><div class="avatar bg-purple">MS</div>Mark Smith</div></td>
+                                <td>Failed login attempt</td>
+                                <td>203.0.113.45</td>
+                                <td><span class="status-badge error">Failed</span></td>
+                            </tr>
+                            <tr>
+                                <td>2026-07-22 09:15 AM</td>
+                                <td><div class="user-cell"><div class="avatar bg-red" style="background: #ef4444;">AS</div>Admin System</div></td>
+                                <td>Updated global settings</td>
+                                <td>10.0.0.5</td>
+                                <td><span class="status-badge active">Success</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+
+            <!-- ROLES TAB -->
+            <div id="tab-roles" class="admin-tab-content" style="display: none;">
+            <div class="sec-head">
+                <h2>Role Management</h2>
+                <button class="btn btn-primary" onclick="window.location.href='404.html'">Create New Role</button>
+            </div>
+            <div class="glass-card p-4">
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Role Name</th>
+                                <th>Description</th>
+                                <th>Permissions</th>
+                                <th>Users</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Super Admin</strong></td>
+                                <td>Full system access</td>
+                                <td><span class="status-badge active">All Modules</span></td>
+                                <td>2</td>
+                                <td><button class="action-btn text-blue" onclick="window.location.href='404.html'"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Finance Manager</strong></td>
+                                <td>Access to billing & payroll</td>
+                                <td><span class="status-badge pending">Finance, HR</span></td>
+                                <td>5</td>
+                                <td><button class="action-btn text-blue" onclick="window.location.href='404.html'"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sales Rep</strong></td>
+                                <td>Client and lead management</td>
+                                <td><span class="status-badge active" style="background: rgba(96, 165, 250, 0.2); color: #60a5fa;">CRM Only</span></td>
+                                <td>24</td>
+                                <td><button class="action-btn text-blue" onclick="window.location.href='404.html'"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+
+            <!-- BACKUPS TAB -->
+            <div id="tab-backups" class="admin-tab-content" style="display: none;">
+            <div class="sec-head">
+                <h2>Data Backups</h2>
+                <button class="btn btn-primary" onclick="window.location.href='404.html'">Trigger Manual Backup</button>
+            </div>
+
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon" style="background: rgba(96, 165, 250, 0.2); color: #60a5fa;"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                    <div class="kpi-info">
+                        <span>Last Backup</span>
+                        <h4>Today, 03:00 AM</h4>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon"><i class="fa-solid fa-hard-drive"></i></div>
+                    <div class="kpi-info">
+                        <span>Total Storage Used</span>
+                        <h4>4.2 TB</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-4">
+                <h3 class="mb-4">Recent Snapshots</h3>
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Backup ID</th>
+                                <th>Type</th>
+                                <th>Size</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#BK-20260722</td>
+                                <td>Automated Daily</td>
+                                <td>142 GB</td>
+                                <td><span class="status-badge active">Completed</span></td>
+                                <td><button class="btn btn-outline" style="padding: 4px 10px; font-size: 0.75rem;" onclick="window.location.href='404.html'">Download</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-20260721</td>
+                                <td>Automated Daily</td>
+                                <td>141 GB</td>
+                                <td><span class="status-badge active">Completed</span></td>
+                                <td><button class="btn btn-outline" style="padding: 4px 10px; font-size: 0.75rem;" onclick="window.location.href='404.html'">Download</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+
+
+
+            <!-- INTEGRATIONS TAB -->
+            <div id="tab-integrations" class="admin-tab-content" style="display: none;">
+            <div class="sec-head">
+                <h2>Connected Apps</h2>
+                <button class="btn btn-primary" onclick="window.location.href='404.html'">Browse Marketplace</button>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="glass-card p-4">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                        <i class="fa-brands fa-slack text-blue" style="font-size: 32px;"></i>
+                        <div>
+                            <h3 style="margin:0;">Slack</h3>
+                            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">Send notifications to channels.</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; margin-top: 15px;" onclick="window.location.href='404.html'">Connected</button>
+                </div>
+                
+                <div class="glass-card p-4">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                        <i class="fa-brands fa-stripe text-blue" style="font-size: 32px;"></i>
+                        <div>
+                            <h3 style="margin:0;">Stripe</h3>
+                            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">Process payments and invoices.</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 15px;" onclick="window.location.href='404.html'">Connect</button>
+                </div>
+                
+                <div class="glass-card p-4">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                        <i class="fa-brands fa-google text-blue" style="font-size: 32px;"></i>
+                        <div>
+                            <h3 style="margin:0;">Google Workspace</h3>
+                            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">Sync calendar and emails.</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 15px;" onclick="window.location.href='404.html'">Connect</button>
+                </div>
+            </div>
+            </div>
+
+            <!-- SETTINGS TAB -->
+            <div id="tab-settings" class="admin-tab-content" style="display: none;">
+            <div class="sec-head">
+                <h2>Preferences</h2>
+                <button class="btn btn-primary" onclick="window.location.href='404.html'">Save Changes</button>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="glass-card p-4">
+                    <h3 class="mb-4">Profile Settings</h3>
+                    <form style="display: flex; flex-direction: column; gap: 15px;">
+                        <div>
+                            <label style="display:block; margin-bottom: 5px; color: rgba(255,255,255,0.7);">Full Name</label>
+                            <input type="text" class="form-control" style="background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px; color: white; width: 100%;" value="John Doe">
+                        </div>
+                        <div>
+                            <label style="display:block; margin-bottom: 5px; color: rgba(255,255,255,0.7);">Email</label>
+                            <input type="email" class="form-control" style="background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px; color: white; width: 100%;" value="john@stackly.com">
+                        </div>
+                    </form>
+                </div>
+                <div class="glass-card p-4">
+                    <h3 class="mb-4">Security</h3>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 15px;">
+                        <li style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 15px;">
+                            <div>
+                                <strong>Two-Factor Authentication</strong>
+                                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin: 0;">Require 2FA for your account.</p>
+                            </div>
+                            <style>
+                                .toggle-switch { position: relative; display: inline-block; width: 40px; height: 24px; }
+                                .toggle-switch input { opacity: 0; width: 0; height: 0; }
+                                .toggle-slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255,255,255,0.2); border-radius: 24px; transition: .4s; }
+                                .toggle-slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; border-radius: 50%; transition: .4s; }
+                                .toggle-switch input:checked + .toggle-slider { background-color: var(--c-blue); }
+                                .toggle-switch input:checked + .toggle-slider:before { transform: translateX(16px); }
+                            </style>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        function switchTab(event, tabId) {
+            if (event) {
+                event.preventDefault(); // Prevent default link jump behavior
+            }
+            
+            // Hide all tab contents
+            const tabs = document.querySelectorAll('.admin-tab-content');
+            tabs.forEach(tab => {
+                tab.style.display = 'none';
+            });
+            
+            // Show the target tab content
+            const activeTab = document.getElementById('tab-' + tabId);
+            if (activeTab) {
+                activeTab.style.display = 'block';
+            }
+            
+            // Remove 'active' class from all nav links
+            const navLinks = document.querySelectorAll('.sidebar-nav .nav-link:not(.logout)');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add 'active' class to the clicked nav link
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add('active');
+            } else {
+                // If called programmatically, find and activate the correct link
+                const targetLink = document.querySelector(`.sidebar-nav .nav-link[onclick*="'${tabId}'"]`);
+                if (targetLink) targetLink.classList.add('active');
+            }
+
+            // Save state to localStorage so we return to this tab when going back
+            localStorage.setItem('adminActiveTab', tabId);
+
+            // On mobile, close the sidebar after clicking a link
+            const sidebarElement = document.getElementById('sidebar');
+            const overlayElement = document.getElementById('sidebar-overlay');
+            if (sidebarElement && sidebarElement.classList.contains('open')) {
+                sidebarElement.classList.remove('open');
+            }
+            if (overlayElement && overlayElement.classList.contains('open')) {
+                overlayElement.classList.remove('open');
+            }
+            document.body.classList.remove('no-scroll');
+        }
+
+        // Restore tab state on page load or when returning via history back
+        window.addEventListener('pageshow', () => {
+            const savedTab = localStorage.getItem('adminActiveTab');
+            if (savedTab) {
+                switchTab(null, savedTab);
+            }
+        });
+
+        // Sidebar Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeBtn = document.getElementById('close-btn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+
+        function toggleSidebar() {
+            if(sidebar) sidebar.classList.toggle('open');
+            if(overlay) overlay.classList.toggle('open');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        if(menuToggle) menuToggle.addEventListener('click', toggleSidebar);
+        if(closeBtn) closeBtn.addEventListener('click', toggleSidebar);
+        if(overlay) overlay.addEventListener('click', toggleSidebar);
+    </script>
+</body>
+</html>

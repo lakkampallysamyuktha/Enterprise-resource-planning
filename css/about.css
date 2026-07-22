@@ -1,0 +1,1035 @@
+/* ==========================================================================
+   Premium ERP SaaS - About Page Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Section 1: Who We Are (Hero)
+   -------------------------------------------------------------------------- */
+.abt-hero {
+    padding-top: 120px; /* Space for fixed header */
+    position: relative;
+    /* overflow: hidden; Removed to prevent clipping on mobile */
+}
+
+.abt-hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.abt-hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-story {
+    font-size: 1.1rem;
+    color: var(--c-white-70);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    border-top: 1px solid var(--c-white-10);
+    padding-top: 2rem;
+}
+
+.stat-box h3 {
+    font-size: 2rem;
+    color: var(--c-blue);
+    margin-bottom: 0.2rem;
+}
+
+.stat-box p {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.abt-hero-visual {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    margin: 2rem 0;
+}
+
+.desktop-visual {
+    display: none;
+}
+
+.mobile-visual .visual-layer {
+    width: 100%;
+}
+
+.mock-dash-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--c-white-10);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.mock-dash-header .dots {
+    display: flex;
+    gap: 5px;
+}
+
+.mock-dash-header .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--c-white-20);
+}
+
+.mock-dash-header .dot:nth-child(1) { background: #ff5f56; }
+.mock-dash-header .dot:nth-child(2) { background: #ffbd2e; }
+.mock-dash-header .dot:nth-child(3) { background: #27c93f; }
+
+.mock-dash-header span {
+    font-size: 0.8rem;
+    color: var(--c-white-50);
+}
+
+.mock-dash-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mock-card {
+    height: 60px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--br-md);
+    border: 1px solid var(--c-white-05);
+}
+
+/* --------------------------------------------------------------------------
+   Section 2: Our ERP Journey
+   -------------------------------------------------------------------------- */
+.abt-journey {
+    position: relative;
+}
+
+.timeline-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 4rem auto 0;
+    padding-left: 20px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 24px;
+    width: 2px;
+    height: 100%;
+    background: var(--c-white-10);
+}
+
+.timeline-progress {
+    position: absolute;
+    top: 0;
+    left: 24px;
+    width: 2px;
+    height: 0%;
+    background: var(--c-blue);
+    box-shadow: 0 0 10px var(--c-blue);
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 15px;
+    left: -4.5px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--c-navy);
+    border: 2px solid var(--c-blue);
+    z-index: 2;
+    transition: var(--tr-med);
+}
+
+.timeline-item.active .timeline-dot {
+    background: var(--c-blue);
+    box-shadow: 0 0 15px var(--c-blue);
+}
+
+.timeline-content {
+    padding: 2rem;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    width: auto;
+}
+
+.year-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--c-blue);
+    border-radius: var(--br-pill);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.timeline-content h4 {
+    font-size: 1.3rem;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   Section 3: How We Operate
+   -------------------------------------------------------------------------- */
+.operate-hub {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.hub-center {
+    width: 100%;
+    max-width: 350px;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.hub-center i {
+    font-size: 3rem;
+    margin: 2rem 0 1rem;
+    display: block;
+}
+
+.hub-center h5 {
+    margin-bottom: 2rem;
+}
+
+.hub-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(37, 99, 235, 0.2);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(0.8); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+}
+
+.hub-nodes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.hub-node {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hub-node i {
+    font-size: 1.5rem;
+    color: var(--c-blue);
+    width: 40px;
+    text-align: center;
+}
+
+.hub-node h6 {
+    margin: 0;
+    flex: 1;
+    font-size: 1rem;
+}
+
+.mini-widget {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+    background: rgba(39, 201, 63, 0.1);
+    color: #27c93f;
+    border-radius: var(--br-sm);
+    border: 1px solid rgba(39, 201, 63, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   Section 4: Live Business Flow (Mobile Base)
+   -------------------------------------------------------------------------- */
+.flow-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.flow-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.flow-card {
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    align-self: center !important;
+    width: 100% !important;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important; /* Fix GSAP conflict */
+}
+.flow-engine {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    position: relative;
+    border: 1px solid var(--c-blue);
+    overflow: hidden;
+}
+.engine-pulse {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; height: 100px;
+    background: rgba(37,99,235,0.1);
+    border-radius: 50%;
+    animation: enginePulse 2s infinite;
+}
+@keyframes enginePulse {
+    0% { transform: translate(-50%, -50%) scale(0.8); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
+}
+.engine-list {
+    list-style: none; padding: 0; margin: 1.5rem 0 0 0;
+    text-align: left; display: inline-block;
+}
+.engine-list li { margin-bottom: 0.5rem; color: var(--c-white-70); }
+.engine-list i { color: var(--c-blue); margin-right: 0.5rem; }
+
+/* --------------------------------------------------------------------------
+   Section 5: Our Approach (Mobile)
+   -------------------------------------------------------------------------- */
+.approach-tree {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    margin-top: 3rem;
+}
+.mobile-tree-line {
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(37,99,235,0.3);
+    transform: none;
+    z-index: 0;
+}
+.t-node {
+    position: relative;
+    z-index: 1;
+    padding: 1.5rem 1.5rem 1.5rem 4rem;
+    width: 100%;
+    text-align: left;
+}
+.node-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--c-navy);
+    border: 1px solid rgba(37,99,235,0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 24px;
+    top: 1.5rem;
+    transform: translateX(-50%);
+    margin: 0;
+    color: var(--c-blue);
+    font-size: 1.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   Section 6: Built For The Future (Mobile)
+   -------------------------------------------------------------------------- */
+.future-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.f-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+}
+/* Timeline line segmented so it doesn't stick out past first/last dots */
+.f-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: -1.5rem;
+    width: 2px;
+    background: rgba(37,99,235,0.3);
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+.f-item:first-child::before {
+    top: 50%;
+}
+.f-item:last-child::before {
+    bottom: 50%;
+}
+.f-timeline:hover .f-item::before {
+    background: rgba(37,99,235,1);
+    box-shadow: 0 0 10px rgba(37,99,235,0.8);
+}
+#f-hero-img {
+    transition: opacity 0.3s ease;
+}
+.f-item {
+    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+.f-dot {
+    position: absolute;
+    left: -7px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: var(--c-blue);
+    border: 3px solid #0b1120;
+    border-radius: 50%;
+    z-index: 2;
+}
+.f-item h4 { margin-bottom: 0.5rem; }
+.f-item p { margin: 0; font-size: 0.9rem; color: var(--c-white-70); }
+.f-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Section 7: Our Commitment (Mobile)
+   -------------------------------------------------------------------------- */
+.abt-commitment {
+    overflow-x: hidden;
+}
+.commit-tree {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    margin-top: 3rem;
+}
+.mobile-commit-line {
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(37,99,235,0.3);
+    transform: none;
+    z-index: 0;
+}
+.c-node {
+    position: relative;
+    z-index: 1;
+    padding: 1.5rem 1.5rem 1.5rem 4rem;
+    width: 100%;
+    text-align: left;
+}
+.c-node > i.fa-solid {
+    position: absolute;
+    left: 24px;
+    top: 1.5rem;
+    transform: translateX(-50%);
+    margin: 0 !important;
+    font-size: 1.5rem !important;
+    background: #0b1120;
+    padding: 0.5rem 0;
+}
+
+/* --------------------------------------------------------------------------
+   Premium CTA (Mobile First)
+   -------------------------------------------------------------------------- */
+.premium-cta {
+    position: relative;
+    padding: 6rem 0;
+    overflow: hidden;
+    background: #0b1120;
+    color: var(--c-white);
+}
+
+.cta-bg-img {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+}
+
+.cta-bg-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cta-overlay-dark {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(11, 17, 32, 0.85);
+    z-index: 1;
+}
+
+.cta-overlay-grid {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: 2;
+}
+
+.cta-radial-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, rgba(37,99,235,0) 70%);
+    z-index: 3;
+}
+
+.cta-particles {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 4;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.cta-particles .particle {
+    position: absolute;
+    width: 6px; height: 6px;
+    background: var(--c-blue);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--c-blue);
+    opacity: 0.5;
+}
+
+.cta-container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+}
+
+.cta-content-box {
+    padding: 3rem 2rem;
+    max-width: 800px;
+}
+
+.cta-content-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content-box p {
+    font-size: 1.1rem;
+    color: var(--c-white-70);
+    margin-bottom: 2.5rem;
+}
+
+.cta-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cta-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.cta-stats .stat-box {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.cta-stats .s-val {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--c-white);
+    margin-bottom: 0.5rem;
+}
+
+.cta-stats .s-label {
+    font-size: 1rem;
+    color: var(--c-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   Media Queries - Tablet (min-width: 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+    /* Section 5 Tablet */
+    .approach-tree {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .mobile-tree-line {
+        display: none;
+    }
+    .t-discover { grid-column: 1 / 3; width: 50%; justify-self: center; }
+    .t-optimize { grid-column: 1 / 3; width: 50%; justify-self: center; }
+    .t-node {
+        padding: 2rem;
+        text-align: center;
+    }
+    .node-icon {
+        position: static;
+        transform: none;
+        margin: 0 auto 1rem auto;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        background: rgba(37,99,235,0.1);
+        border: 1px solid rgba(37,99,235,0.2);
+    }
+
+    /* Section 7 Tablet */
+    .commit-tree {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .c-hero { grid-column: 1 / 3; width: 60%; justify-self: center; }
+    .c-node {
+        padding: 2rem;
+        text-align: center;
+    }
+    .c-node > i.fa-solid {
+        position: static;
+        transform: none;
+        margin-bottom: 1rem !important;
+        font-size: 2rem !important;
+        padding: 0;
+        background: transparent;
+    }
+
+    /* Premium CTA Tablet */
+    .cta-btns {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .cta-stats {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .cta-stats .stat-box {
+        flex: 1;
+    }
+}
+
+
+
+/* ==========================================================================
+   Media Queries - Desktop Scale Up (min-width: 1024px)
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+    
+    /* Section 1 */
+    .abt-hero {
+        padding-top: 150px;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    .abt-hero-grid {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .abt-hero-content {
+        flex: 1;
+        padding-right: 2rem;
+    }
+
+    .abt-hero-content h1 { font-size: 3.5rem; }
+    
+    .mobile-visual { display: none; }
+    .desktop-visual {
+        display: block;
+        flex: 1;
+        height: 500px;
+    }
+
+    .desktop-visual .layer-1 {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 80%;
+        height: 350px;
+        z-index: 1;
+    }
+
+    .desktop-visual .mock-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+        height: 250px;
+    }
+
+    .desktop-visual .mock-box {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid var(--c-white-05);
+        border-radius: var(--br-md);
+    }
+
+    .desktop-visual .blue-bg {
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.05));
+    }
+
+    .desktop-visual .layer-2 {
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        width: 60%;
+        height: 200px;
+        z-index: 2;
+        padding: 1.5rem;
+    }
+
+    .mock-line-chart {
+        width: 100%;
+        height: 100%;
+        border-bottom: 1px solid var(--c-white-20);
+        border-left: 1px solid var(--c-white-20);
+        position: relative;
+    }
+
+    .line-point {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--c-blue);
+        box-shadow: 0 0 10px var(--c-blue);
+    }
+    .line-point.p1 { bottom: 20%; left: 20%; }
+    .line-point.p2 { bottom: 60%; left: 50%; }
+    .line-point.p3 { bottom: 80%; left: 80%; }
+
+    .desktop-visual .layer-3 {
+        position: absolute;
+        top: 60px;
+        right: -20px;
+        padding: 1rem 1.5rem;
+        z-index: 3;
+    }
+
+    .mock-kpi {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-weight: 600;
+    }
+
+
+    /* Section 2: Alternating Timeline */
+    .timeline-wrapper {
+        padding-left: 0;
+    }
+    .timeline-line {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline-progress {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline-item {
+        width: 50%;
+        padding: 0;
+    }
+    .timeline-item.left {
+        left: 0;
+        padding-right: 3rem;
+        text-align: right;
+    }
+    .timeline-item.right {
+        left: 50%;
+        padding-left: 3rem;
+    }
+    .timeline-item.left .timeline-dot {
+        left: auto;
+        right: -5.5px;
+    }
+    .timeline-item.right .timeline-dot {
+        left: -5.5px;
+    }
+
+
+    /* Section 3: Hub and Spoke SVG Architecture */
+    .operate-hub {
+        height: 600px;
+        margin-top: 5rem;
+    }
+    .hub-connections {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .hub-line {
+        fill: none;
+        stroke: var(--c-white-20);
+        stroke-width: 2;
+        stroke-dasharray: 8 8;
+        animation: hubDash 15s linear infinite;
+    }
+    @keyframes hubDash { to { stroke-dashoffset: -500; } }
+
+    .hub-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+    }
+    
+    .hub-nodes {
+        display: block; /* use absolute positioning */
+    }
+    .hub-node {
+        position: absolute;
+        width: 280px;
+        margin-left: -140px;
+        margin-top: -45px;
+    }
+    
+    /* Manually positioning nodes based on the SVG paths
+       Paths: (250,150), (250,450), (750,150), (750,450), (500,80), (500,520) 
+       assuming 1000x600 coordinate space mapping to % */
+    .node-1 { top: 13.3%; left: 50%; } /* (500, 80) */
+    .node-2 { top: 25%; left: 25%; }   /* (250, 150) */
+    .node-3 { top: 25%; left: 75%; }   /* (750, 150) */
+    .node-4 { top: 75%; left: 25%; }   /* (250, 450) */
+    .node-5 { top: 75%; left: 75%; }   /* (750, 450) */
+    .node-6 { top: 86.6%; left: 50%; } /* (500, 520) */
+
+
+    /* Section 4 Desktop */
+    .flow-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        min-height: 500px;
+    }
+    .flow-lines {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 1;
+    }
+    .f-line {
+        fill: none;
+        stroke: var(--c-blue);
+        opacity: 0.3;
+        stroke-width: 2;
+        stroke-dasharray: 10 10;
+        animation: flowDash 20s linear infinite;
+    }
+    @keyframes flowDash { to { stroke-dashoffset: -1000; } }
+    .flow-col { position: relative; z-index: 2; width: 28%; }
+    
+    /* Section 5 Desktop */
+    .approach-tree {
+        display: block; /* revert grid */
+        height: 800px;
+        position: relative;
+        margin-top: 3rem;
+    }
+    .mobile-tree-line {
+        display: none;
+    }
+    .tree-lines {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 1;
+    }
+    .tree-path {
+        fill: none;
+        stroke: var(--c-blue);
+        stroke-width: 2;
+        stroke-dasharray: 10 10;
+        opacity: 0.4;
+        animation: flowDash 20s linear infinite;
+    }
+    .t-node {
+        position: absolute;
+        width: 220px;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        transition: transform var(--tr-fast);
+    }
+    .t-node:hover { transform: translate(-50%, -55%) scale(1.05); }
+    .t-discover { top: 15%; left: 50%; grid-column: auto; width: 220px; }
+    .t-integrate { top: 50%; left: 25%; }
+    .t-automate { top: 50%; left: 75%; }
+    .t-optimize { top: 85%; left: 50%; grid-column: auto; width: 220px; }
+    
+    /* Section 6 Desktop */
+    .future-layout {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .f-hero {
+        flex: 1;
+    }
+    .f-timeline {
+        flex: 1;
+        padding-left: 3rem;
+    }
+    .f-badge {
+        bottom: 40px;
+        left: 40px;
+        font-size: 1.2rem;
+    }
+
+    /* Section 7 Desktop */
+    .commit-tree {
+        display: block; /* revert grid */
+        height: 600px;
+        position: relative;
+        margin-top: 3rem;
+    }
+    .mobile-commit-line {
+        display: none;
+    }
+    .commit-lines {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 1;
+    }
+    .c-path {
+        fill: none;
+        stroke: var(--c-blue);
+        stroke-width: 2;
+        stroke-dasharray: 10 10;
+        opacity: 0.4;
+        animation: flowDash 20s linear infinite;
+    }
+    .c-hero {
+        position: absolute;
+        top: 25%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        z-index: 2;
+    }
+    .c-node {
+        position: absolute;
+        width: 320px;
+        z-index: 3;
+        transform: translate(-50%, -50%);
+        transition: transform var(--tr-fast);
+    }
+    .c-node:hover { transform: translate(-50%, -55%) scale(1.05); }
+    .c-support { top: 80%; left: 25%; }
+    .c-vision { top: 80%; left: 75%; }
+
+    /* Premium CTA Desktop */
+    .premium-cta {
+        padding: 8rem 0;
+    }
+    .cta-content-box h2 {
+        font-size: 3rem;
+    }
+    .cta-content-box p {
+        font-size: 1.2rem;
+    }
+    .cta-stats {
+        max-width: 900px;
+    }
+}
+
+/* Image Hover Zoom Effects */
+.mock-dash-body { overflow: hidden; }
+.mock-dash-body img { transition: transform 0.5s ease; }
+.visual-layer:hover .mock-dash-body img { transform: scale(1.05); }
+
+.visual-layer.layer-2 { overflow: hidden; }
+.visual-layer.layer-2 img { transition: transform 0.5s ease; }
+.visual-layer.layer-2:hover img { transform: scale(1.05); }
+
+.f-hero { overflow: hidden; }
+.f-hero img { transition: transform 0.5s ease; }
+.f-hero:hover img { transform: scale(1.05); }
+
+.c-hero { overflow: hidden; }
+.c-hero img { transition: transform 0.5s ease; }
+.c-hero:hover img { transform: scale(1.05); }
+
+/* --------------------------------------------------------------------------
+   Mobile Fixes
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .abt-hero {
+        padding-top: 100px;
+        overflow-x: hidden;
+    }
+    .abt-hero-content h1 {
+        font-size: 2rem;
+    }
+}
