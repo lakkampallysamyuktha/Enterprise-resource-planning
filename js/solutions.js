@@ -159,47 +159,47 @@ document.addEventListener('DOMContentLoaded', () => {
         'manufacturing-inventory': { 
             title: "Manufacturing Operations Suite", 
             desc: "End-to-end operational control with advanced forecasting and real-time stock tracking for manufacturing.",
-            img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
+            img: "Images/unsplash-1581091226825.webp"
         },
         'manufacturing-finance': { 
             title: "Manufacturing Financial Cloud", 
             desc: "Unified financial management, automated compliance, and real-time ledger visibility for factories.",
-            img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+            img: "Images/unsplash-1551288049.webp"
         },
         'manufacturing-hr': { 
             title: "Manufacturing Workforce Hub", 
             desc: "Digital workforce tools, automated payroll, and intelligent capacity planning for plant workers.",
-            img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800"
+            img: "Images/unsplash-1581092160562.webp"
         },
         'retail-inventory': { 
             title: "Retail Operations Suite", 
             desc: "Omnichannel inventory control with live stock tracking across all retail branches.",
-            img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800"
+            img: "Images/unsplash-1556742049.webp"
         },
         'retail-finance': { 
             title: "Retail Financial Cloud", 
             desc: "Automated POS reconciliation, multi-store financial reporting, and margin analysis.",
-            img: "https://images.unsplash.com/photo-1556742111-a301076d9d18?auto=format&fit=crop&q=80&w=800"
+            img: "Images/unsplash-1556742111.webp"
         },
         'retail-hr': { 
             title: "Retail Workforce Hub", 
             desc: "Shift scheduling, performance tracking, and automated payroll for retail staff.",
-            img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+            img: "Images/unsplash-1522071820081.webp"
         },
         'services-inventory': { 
             title: "Services Operations Suite", 
             desc: "Resource management, asset tracking, and utilization forecasting for professional services.",
-            img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800"
+            img: "Images/unsplash-1454165804606.webp"
         },
         'services-finance': { 
             title: "Services Financial Cloud", 
             desc: "Project-based accounting, automated invoicing, and real-time profitability tracking.",
-            img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+            img: "Images/unsplash-1460925895917.webp"
         },
         'services-hr': { 
             title: "Services Workforce Hub", 
             desc: "Talent management, skill tracking, and performance analytics for professional teams.",
-            img: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=80&w=800"
+            img: "Images/unsplash-1600880292089.webp"
         }
     };
 
